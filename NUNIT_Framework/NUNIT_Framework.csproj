@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="GlobalVariables.cs" />
     <Compile Include="Pages\AddEmpPage.cs" />
+    <Compile Include="Pages\BuzzPage.cs" />
     <Compile Include="Pages\LoginOrangeHRMPage.cs" />
     <Compile Include="Pages\SearchEmpPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
