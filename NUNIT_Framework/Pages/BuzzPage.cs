@@ -12,6 +12,7 @@ namespace NUNIT_Framework.Pages
 {
     public class BuzzPage : UIActions
     {
+        //This is BuzzPage
         public static IWebElement BuzzButton => driver.FindElement(By.XPath("//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[11]/a"));
 
         public static IWebElement TextBox => driver.FindElement(By.XPath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div/div[1]/div[1]/div[2]/form/div/textarea"));
