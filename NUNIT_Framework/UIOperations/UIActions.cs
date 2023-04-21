@@ -15,6 +15,12 @@ namespace NUNIT_Framework.UIOperations
         {
             element.SendKeys(textToEnter);
 
+
+
+
+
+
+            ////Updated Code
             return new UIActions();
         }
         public UIActions EnterText1(IWebElement element, string textToEnter)
