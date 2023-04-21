@@ -10,7 +10,7 @@ namespace NUNIT_Framework.UIOperations
 {
     public class UIActions : GlobalVariables
     {
-        //New 
+        //kushal
         public UIActions EnterText(IWebElement element, string textToEnter)
         {
             element.SendKeys(textToEnter);
