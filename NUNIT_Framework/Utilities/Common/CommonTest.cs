@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using NUNIT_Framework.Utilities.hooks;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Diagnostics;
@@ -6,10 +7,11 @@ using System.Diagnostics;
 namespace NUNIT_Framework.Utilities.Common
 {
     [TestFixture]
-    class CommonTest : GlobalVariables
+    public class CommonTest : GlobalVariables
     {
         public CommonTest LaunchBrowser(string browserType)
         {
+          
             try
             {
                 switch (browserType.ToUpper())
@@ -48,6 +50,8 @@ namespace NUNIT_Framework.Utilities.Common
 
             }
             catch (Exception e) { }
+            
         }
+        
     }   
 }

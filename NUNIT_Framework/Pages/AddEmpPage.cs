@@ -1,4 +1,5 @@
 ﻿using NUNIT_Framework.UIOperations;
+using NUNIT_Framework.Utilities.XMLUtility;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -7,8 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
-
+using System.Xml;
 
 namespace NUNIT_Framework.Pages
 {
@@ -32,14 +32,19 @@ namespace NUNIT_Framework.Pages
             Thread.Sleep(2000);
             AddButton.Click();
             Thread.Sleep(2000);
-             Fname.SendKeys("Rajesh");
-            Thread.Sleep(2000);
-            Mname.SendKeys("RajuAnna");
-            Thread.Sleep(2000);
-            Lname.SendKeys("Gangurde");
-            Thread.Sleep(2000);
+
+            FirstName(Fname, XMLReader.XmlDataDocument("AddEmp", "firstname"));
+            Thread.Sleep(1000);
+
+            MiddleName(Mname, XMLReader.XmlDataDocument("AddEmp", "middlename"));
+            Thread.Sleep(1000);
+
+            LastName(Lname, XMLReader.XmlDataDocument("AddEmp", "lastname"));
+            Thread.Sleep(1000);
+
             SaveButton.Click();
-            Thread.Sleep(3000);
+            Thread.Sleep(4000);
+
             return new AddEmpPage();
         }
     }
